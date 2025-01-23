@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-exports.up = (pgm) => {
+export const up = (pgm) => {
   pgm.createTable('users', {
     id: 'id',
     name: { type: 'varchar(1000)', notNull: true },
