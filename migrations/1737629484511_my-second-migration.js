@@ -6,3 +6,7 @@ export const up = (pgm) => {
     lead: { type: 'text', notNull: true },
   });
 };
+
+export const down = (pgm) => {
+  pgm.dropColumns('posts', ['lead']);
+};

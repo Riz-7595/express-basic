@@ -28,3 +28,9 @@ export const up = (pgm) => {
   });
   pgm.createIndex('posts', 'userId');
 };
+
+export const down = (pgm) => {
+  pgm.dropIndex('posts', 'userId');
+  pgm.dropTable('posts');
+  pgm.dropTable('users');
+};
